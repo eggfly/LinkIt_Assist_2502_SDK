@@ -1,0 +1,4 @@
+<APP id="APP_Resource">
+    <IMAGE id="ID_IMAGE_01" type="Normal">.\WALL03.bmp</IMAGE>
+    <STRING>.\res\ref_list_Resource.txt</STRING>
+</APP>

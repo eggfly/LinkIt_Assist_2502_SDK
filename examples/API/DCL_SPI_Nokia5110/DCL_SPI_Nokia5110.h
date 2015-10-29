@@ -1,0 +1,23 @@
+#ifndef _LINKIT_APP_WIZARDTEMPLATE_
+#define	_LINKIT_APP_WIZARDTEMPLATE_
+
+#define VM_SPI_READ_BUFFER_SIZE 8
+#define VM_SPI_WRITE_BUFFER_SIZE 8
+
+
+typedef struct _VM_READ_BUFFER
+{
+    VMUINT8 read_buffer[VM_SPI_READ_BUFFER_SIZE];
+	VMUINT8 read_len;
+}VM_READ_BUFFER;
+
+
+typedef struct _VM_WRITE_BUFFER
+{
+    VMUINT8 write_buffer[VM_SPI_WRITE_BUFFER_SIZE];
+	VMUINT8 write_len;
+}VM_WRITE_BUFFER;
+
+
+#endif
+

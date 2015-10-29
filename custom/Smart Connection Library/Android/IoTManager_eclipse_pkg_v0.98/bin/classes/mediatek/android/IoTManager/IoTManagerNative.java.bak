@@ -1,0 +1,98 @@
+/* Copyright Statement:
+ *
+ * This software/firmware and related documentation ("MediaTek Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to MediaTek Inc. and/or its licensors.
+ * Without the prior written permission of MediaTek inc. and/or its licensors,
+ * any reproduction, modification, use or disclosure of MediaTek Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ */
+/* MediaTek Inc. (C) 2010. All rights reserved.
+ *
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK SOFTWARE")
+ * RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES ARE PROVIDED TO RECEIVER ON
+ * AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH THE MEDIATEK SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN MEDIATEK SOFTWARE. MEDIATEK SHALL ALSO NOT BE RESPONSIBLE FOR ANY MEDIATEK
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO THE MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT MEDIATEK'S OPTION, TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE.
+ *
+ * The following software/firmware and/or related documentation ("MediaTek Software")
+ * have been modified by MediaTek Inc. All revisions are subject to any receiver's
+ * applicable license agreements with MediaTek Inc.
+ */
+
+package mediatek.android.IoTManager;
+
+import mediatek.android.IoTManager.ClientInfo;
+
+public class IoTManagerNative {
+	static {
+        System.loadLibrary("IoT_manager_jni");
+    }
+	
+    public IoTManagerNative()
+    {
+    
+    }
+    
+    /**
+     * Start SmartConnection with Home AP
+     * 
+     * @bSSID : SSID of Home AP
+	 * @bPassword : Password of Home AP
+	 * @Auth : Auth of Home AP
+     */
+    public native int StartSmartConnection(byte[] bSSID, byte[] bPassword, byte Auth);
+	
+	/**
+     * Stop SmartConnection by user
+     * 
+     */
+	
+	public native int StopSmartConnection();
+	
+	/*
+	 * initization Control Server
+	 * 
+	 * return : 0 : success
+	 *          1 : failed
+	 */
+	public native int InitControlServer();
+    
+	/*
+	 * Query all client info of connected device 
+	 *
+	 */
+	 
+	public native ClientInfo[] QueryClientInfo();
+	
+	public native int ControlClientOffline(int ClientID);
+	
+	public native int SetGPIO(int ClientID, int GPIOMap);
+
+	public native int GetGPIO(int ClientID, int[] GPIOMap);
+
+	public native int SetUART(int ClientID, char[] pData, int Len);
+	
+	/*
+	 *
+	 * return : Uart data len
+	 */
+	public native int GetUART(int ClientID, char[] pData);
+	
+	public native int SetPWM(int ClientID, int Red, int Green, int Blue);
+	
+	public native int GetPWM(int ClientID, int[] Red, int[] Green, int[] Blue);
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:descendantFocusability="blocksDescendants"> 
+  
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">   
+		<ImageView android:id="@+id/img" 
+			android:layout_width="75px"
+			android:layout_height="75px"
+			android:layout_margin="5px"/> 
+	</LinearLayout> 
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		android:layout_weight="1"> 
+	
+		<TextView android:id="@+id/ClientID" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textColor="#FFFFFFFF"
+            android:textSize="13px" />
+			
+        <TextView android:id="@+id/vendor" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textColor="#FFFFFFFF"
+            android:textSize="18px" /> 
+		<TextView android:id="@+id/product" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:textColor="#FFFFFFFF"
+			android:textSize="18px" /> 
+        <TextView android:id="@+id/producttype" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textColor="#FFFFFFFF"
+            android:textSize="13px" /> 
+  
+    </LinearLayout> 
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		android:layout_weight="1"> 
+	
+		<Button android:id="@+id/ClientOffLine"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:textSize="15px" 
+					android:text="@string/client_offline"
+					android:focusable="false">
+		</Button>
+  
+    </LinearLayout> 
+
+     <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		android:layout_weight="1"> 
+		
+		<TextView android:id="@+id/GPIO_Info" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textColor="#FFFFFFFF"
+            android:textSize="13px" /> 
+            
+		<Button android:id="@+id/GPIO_Query"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:textSize="15px" 
+					android:text="@string/query_gpio"
+					android:focusable="false">
+		</Button>
+  
+    </LinearLayout> 
+	
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">  
+        <ImageView android:id="@+id/LetImg" 
+			android:layout_width="60px"
+			android:layout_height="50px"
+			android:layout_margin="5px"/> 
+			
+		<Button android:id="@+id/LetOnOff"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:layout_weight="1"
+					android:textSize="15px"
+					android:text="@string/device_status"
+					android:focusable="false">
+		</Button>
+	</LinearLayout> 
+  
+</LinearLayout>

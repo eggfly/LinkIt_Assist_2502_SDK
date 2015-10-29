@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:background="@drawable/green"
+	>
+		
+	<LinearLayout android:id="@+id/user"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical">		
+		<TableLayout 
+			android:layout_width="fill_parent" android:paddingTop="5dip"
+			android:layout_height="wrap_content"
+			 >
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/Network_Type_View" 
+					android:text="@string/network_type_view"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingLeft="5dip" android:textStyle="bold"
+					android:textSize="18px"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:textSize="18px"
+					android:gravity="right" android:textColor="#0802F3"
+					>
+				</TextView>
+				<Spinner android:id="@+id/NetWork_Type_Spinner"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textColor="#A010DF"
+					android:textSize="10px" 
+					android:layout_centerHorizontal="true">
+				</Spinner>
+
+				<CheckBox 
+				android:id="@+id/EncryptCheck" 
+				android:text="@string/encrypt_check"
+				android:layout_width="wrap_content" 
+				android:layout_marginLeft="30dip"
+				android:textColor="#A010DF"
+				android:textSize="18px"
+				android:layout_height="wrap_content">
+				</CheckBox>
+				
+			</TableRow>
+			
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:id="@+id/IPAddrView" 
+					android:text="@string/internet_ipaddr_view"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="5dip" 
+					android:textStyle="bold"
+					android:textSize="18px"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" 
+					android:text="@string/temp"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip" 
+					android:textStyle="bold"
+					android:textSize="18px"
+					android:gravity="right" android:textColor="#0802F3"
+					>
+				</TextView>
+				<EditText 
+					android:id="@+id/IPAddrEdit" 
+					android:text="@string/ipaddr_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_weight="1"
+					android:textSize="18px"
+					android:textColor="#000000"
+					>
+				</EditText>
+				<Button android:id="@+id/InitServerButton"
+					android:layout_width="fill_parent" 					
+					android:layout_height="fill_parent" 
+					android:textSize="18px"
+					android:text="@string/init_server"
+					android:textColor="#A010DF"
+					android:focusable="false">
+				</Button>
+			</TableRow>	
+
+			
+			<!-- 
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:id="@+id/PortView" android:text="@string/port_view"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingLeft="5dip"  android:textStyle="bold" android:textSize="25px"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold" android:textSize="25px"
+					android:gravity="right" android:textColor="#0802F3"
+					>
+				</TextView>
+				<EditText 
+					android:id="@+id/PortEdit" 
+					android:text="@string/port_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_weight="1"
+					android:textColor="#000000"
+					>
+				</EditText>
+			</TableRow>	
+			-->
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/CtrlPasswordView" 
+					android:text="@string/ctrl_password_view"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="5dip"  
+					android:textStyle="bold" 
+					android:textSize="18px"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip" 
+					android:textStyle="bold" 
+					android:textSize="18px"
+					android:gravity="right" 
+					android:textColor="#0802F3"
+					>
+				</TextView>
+				<EditText 
+					android:id="@+id/CtrlPasswordEdit" 
+					android:text="@string/ctrl_password_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_weight="1"
+					android:textSize="18px"
+					android:textColor="#000000"
+					>
+				</EditText>
+				<Button android:id="@+id/SetCtrlPassword"
+					android:layout_width="fill_parent" 					
+					android:layout_height="fill_parent" 
+					android:textSize="18px"
+					android:text="@string/set_ctrl_password"
+					android:textColor="#A010DF"
+					android:focusable="false">
+				</Button>
+			</TableRow>	
+
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:id="@+id/FriendIDView" 
+					android:text="@string/friendid_ipaddr_view"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="5dip" 
+					android:textStyle="bold"
+					android:textSize="18px"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip" 
+					android:textStyle="bold"
+					android:textSize="18px"
+					android:gravity="right" 
+					android:textColor="#0802F3"
+					>
+				</TextView>
+				<EditText 
+					android:id="@+id/FriendIDEdit" 
+					android:text="@string/friendid_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_weight="1"
+					android:textSize="18px"
+					android:textColor="#000000"
+					>
+				</EditText>
+				<Button android:id="@+id/AddFriend"
+					android:layout_width="fill_parent" 					
+					android:layout_height="fill_parent" 
+					android:textSize="18px"
+					android:text="@string/add_friend"
+					android:textColor="#A010DF"
+					android:focusable="false">
+				</Button>
+			</TableRow>	
+		</TableLayout>
+		<Button android:id="@+id/QueryClientList"
+					android:layout_width="fill_parent" 					
+					android:layout_height="wrap_content" 
+					android:textSize="18px"
+					android:text="@string/query_clientlist"
+					android:textColor="#A010DF"
+					android:focusable="false">
+		</Button>
+		
+		<ListView
+			android:divider="#3FE03F"	
+			android:paddingTop="10dip"
+			android:dividerHeight="10px"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:descendantFocusability="beforeDescendants"
+			android:id="@id/android:list">
+		</ListView>
+	</LinearLayout>
+	
+</FrameLayout>

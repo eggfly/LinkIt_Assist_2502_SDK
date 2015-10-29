@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" > 
+  
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">   
+		<ImageView android:id="@+id/img" 
+			android:layout_width="80px"
+			android:paddingTop="20dip"
+			android:layout_height="200px"
+			android:layout_margin="5px"/> 
+	</LinearLayout> 
+
+	<LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"> 
+        
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		> 
+	
+		<TextView android:id="@+id/ClientID" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#FFFFFFFF"
+            android:textSize="13px" />
+			
+        <TextView android:id="@+id/vendor" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="3dip"
+            android:textColor="#000000"
+            android:textSize="18px" /> 
+		<TextView android:id="@+id/product" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="3dip"
+			android:textColor="#000000"
+			android:textSize="18px" /> 
+        <TextView android:id="@+id/producttype" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="3dip"
+            android:textColor="#000000"
+            android:textSize="22px" /> 
+  
+    </LinearLayout> 
+		 
+	<!-- Client offline -->
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		> 
+		
+		<Button android:id="@+id/ClientOffLine"
+					android:layout_width="120px" 
+					android:layout_height="60px" 
+					android:textSize="15px" 
+					android:text="@string/client_offline"
+					android:textColor="#000000"
+					>
+		</Button>
+		<TableRow android:id="@+id/gpio_l"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				>
+			<TextView android:id="@+id/IPAddr_Name" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:textColor="#1010DF"
+	            android:paddingTop="8dip"
+	            android:text="@string/ipaddr_name"
+	            android:textSize="20px" />
+			<TextView android:id="@+id/IPaddress" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_marginLeft="5dip"
+	            android:paddingTop="8dip"
+	            android:textColor="#F309F2"
+	            android:textSize="20px" />
+		</TableRow>
+  		
+    </LinearLayout> 
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		> 
+		<TableRow android:id="@+id/gpio_l"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				>
+			<TextView android:id="@+id/GPIO_List_Name" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:textColor="#1010DF"
+	            android:layout_marginLeft="80dip"
+	            android:text="@string/gpio_list_name"
+	            android:textSize="18px" />
+			<TextView android:id="@+id/GPIO_List" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:textColor="#1010DF"
+	            android:text="@string/gpio_list"
+	            android:layout_marginLeft="16dip"
+	            android:textSize="18px" />
+		</TableRow>
+	</LinearLayout>
+	<!-- Query GPIO -->
+     <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+		>  
+            
+		<Button android:id="@+id/GPIO_Query"
+					android:layout_width="120px" 
+					android:layout_height="50px" 
+					android:textSize="15px" 
+					android:text="@string/query_gpio"
+					android:textColor="#000000"
+					>
+		</Button>
+		
+		<TableLayout 
+			android:layout_width="fill_parent" 
+			android:paddingTop="8dip"
+			android:layout_height="fill_parent" 
+			android:orientation="vertical"
+			 >
+		<TableRow android:id="@+id/gpio_l"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent">
+			<TextView android:id="@+id/GPIO_Value_Name" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#1010DF"
+	            android:text="@string/gpio_get_values_name"
+	            android:textSize="18px" />
+	        <TextView android:id="@+id/GPIO_Values" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#F309F2"
+	            android:text="@string/gpio_values"
+	            android:layout_marginLeft="9dip"
+	            android:textSize="18px" />
+	     </TableRow>
+		</TableLayout> 
+	</LinearLayout>
+
+	<!-- Set GPIO -->
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/GPIO_Set"
+					android:layout_width="120px" 
+					android:layout_height="50px" 
+					android:textSize="15px" 
+					android:text="@string/set_gpio"
+					android:textColor="#000000">
+		</Button>
+       <TableLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:orientation="vertical">
+		
+		<TableRow android:id="@+id/gpio_l"
+				android:layout_width="fill_parent" 
+				android:focusable="true"
+				android:layout_height="fill_parent">
+			<TextView android:id="@+id/GPIO_Value_Name" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#1010DF"
+	            android:paddingTop="5dip"
+	            android:text="@string/gpio_set_values_name"
+	            android:textSize="18px" />
+	        <EditText android:id="@+id/Edit_GPIO_Values" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#F309F2"
+	            android:hint="@string/input_hint"
+	            android:textSize="18px" />
+	     </TableRow>
+		</TableLayout> 
+    </LinearLayout> 
+
+    <!-- Uart Rx -->
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/Uart_Rx"
+					android:layout_width="120px" 
+					android:layout_height="60px" 
+					android:textSize="15px" 
+					android:text="@string/uart_rx"
+					android:textColor="#000000">
+		</Button>
+		<TextView android:id="@+id/View_Uart_Rx" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#F309F2"
+	            android:paddingTop="10dip"
+	            android:layout_marginLeft="12dip"
+	            android:text="@string/gpio_values"
+	            android:textSize="18px">
+	    </TextView>
+    </LinearLayout> 
+
+    <!-- Uart tx -->
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/Uart_Tx"
+					android:layout_width="120px" 
+					android:layout_height="60px" 
+					android:textSize="15px" 
+					android:text="@string/uart_tx"
+					android:textColor="#000000">
+		</Button>
+		<EditText android:id="@+id/Edit_Uart_Tx" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" 
+	            android:textColor="#F309F2"
+	            android:hint="@string/input_hint"
+	            android:textSize="18px">
+	    </EditText>
+    </LinearLayout> 
+	<LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">  
+       			
+		<Button android:id="@+id/LetOnOff"
+					android:layout_width="120px" 
+					android:layout_height="60px" 
+					android:textSize="15px"
+					android:textColor="#000000"
+					android:text="@string/device_status"
+					>
+		</Button>
+		
+		<ImageView android:id="@+id/LetImg" 
+			android:layout_width="200px"
+			android:layout_height="50px"
+			android:layout_margin="5px"/> 
+		
+	</LinearLayout> 
+  </LinearLayout> 
+</LinearLayout>

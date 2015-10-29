@@ -1,0 +1,1 @@
+This example shows how to setup the BLE profile by implementing the Device Information Service (DIS) profile.

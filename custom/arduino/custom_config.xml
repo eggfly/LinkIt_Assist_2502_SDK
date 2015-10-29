@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+	<packageinfo>
+		<userinfo>
+			<developer>MediaTek Inc</developer>
+			<appname>Demo</appname>
+			<appversion>2.0.0</appversion>
+			<appid>-1</appid>
+		</userinfo>
+		<targetconfig>
+			<mem>800</mem>
+		</targetconfig>
+		<output>
+			<device>0</device>
+		</output>
+		<options>
+			<compile>-mthumb-interwork -c -gdwarf-2 -gstrict-dwarf -fpic -mcpu=arm7tdmi-s -fvisibility=hidden -mthumb -mlittle-endian -O2 -DF_CPU=84000000L -DARDUINO=156 -DARDUINO_MTK_ONE -DARDUINO_ARCH_MTK -D__COMPILER_GCC__ -D__LINKIT_ONE__ -D__HDK_LINKIT_ONE_V1__ -fno-exceptions -fno-non-call-exceptions -fno-rtti</compile>
+			<link>-Wl,--gc-sections -fpic -pie --specs=nosys.specs</link>
+		</options>
+	</packageinfo>

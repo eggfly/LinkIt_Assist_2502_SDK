@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:background="@drawable/back_green"
+	>
+		
+	<LinearLayout android:id="@+id/user"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">	
+				
+		<TableLayout 
+			android:layout_width="fill_parent" android:paddingTop="10dip"
+			android:layout_height="wrap_content"
+			 >
+			
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="fill_parent">
+				<TextView android:id="@+id/SSIDView" android:text="@string/ssid_view"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:textColor="#0802F3">
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:gravity="right" android:textColor="#0802F3">
+				</TextView>
+				<EditText android:id="@+id/SSIDEdit" android:text="@string/ssid_edit"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:singleLine="true" android:layout_weight="1">
+				</EditText>
+
+			</TableRow>
+			
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="fill_parent">
+				<TextView android:id="@+id/Identify" android:text="@string/identify"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:textColor="#0802F3">
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:gravity="right" android:textColor="#0802F3">
+				</TextView>
+				<EditText android:id="@+id/IdentifyEdit" android:text="@string/identify_edit"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:singleLine="true" android:layout_weight="1">
+				</EditText>
+
+			</TableRow>
+			
+			<TableRow android:id="@+id/user_infor"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:id="@+id/PasswordView" android:text="@string/password_view"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:textColor="#0802F3" >
+				</TextView>
+				<TextView android:id="@+id/Temp" android:text="@string/temp"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold"
+					android:gravity="right" android:textColor="#0802F3"
+					>
+				</TextView>
+				<EditText 
+					android:id="@+id/PasswordEdit" 
+					android:text="@string/password_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_weight="1"
+					android:password="true">
+				</EditText>
+			</TableRow>			
+		</TableLayout>
+		
+	<TableLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			 >	
+		<CheckBox 
+			android:id="@+id/PwdCheck" 
+			android:text="@string/pwd_check"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			>
+		</CheckBox>
+
+		<Button android:id="@+id/StartButton" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/start_button"
+			android:paddingTop="15dip"
+			android:layout_weight="2">
+		</Button>
+	</TableLayout>
+</LinearLayout>	
+</FrameLayout>

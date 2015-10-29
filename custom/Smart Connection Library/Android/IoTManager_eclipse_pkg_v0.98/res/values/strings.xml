@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mediatek IoT Manager</string>
+    <string name="app_name_ver">IoT Manager v0.98</string>
+    <string name="ssid_view">Ssid</string>
+    <string name="password_view">Password</string>
+    <string name="ssid_edit">Mediatek</string>
+    <string name="password_edit"></string>
+    <string name="target_text">Target</string>
+    <string name="target_edit">FF:FF:FF:FF:FF:FF</string>
+    <string name="authmode_text">AuthMode</string>
+    <string name="authmode_view"></string>
+	<string name="start_button">Start\nAPI:StartSmartConnection()</string>
+	<string name="stop_button">Stop\nAPI:StopSmartConnection()</string>
+	<string name="temp">:</string>
+	<string name="pwd_check">Show Password</string>
+	<string name="encrypt_check">Encrypt</string>
+	<string name="identify">Identify</string>
+	<string name="identify_edit"></string>
+	<string name="input_hint">Please input ...</string>
+	
+	<string name="ipaddrdefault_hint">192.168.0.99</string>
+	<string name="port_hint">7681</string>
+	<string name="ipaddr_edit">182.148.123.91</string>
+	<string name="init_server">Init Server</string>
+	<string name="port_edit">7681</string>
+	<string name="port_view">Port</string>
+	<string name="internet_ipaddr_view">IoT Server </string>
+	<string name="friendid_ipaddr_view">Friend ID </string>
+	<string name="friendid_edit">00:0c:43:12:34:dd </string>
+	<string name="add_friend">Add</string>
+	<string name="ctrl_password_view">Ctrl PWD</string>
+	<string name="ctrl_password_edit"></string>
+	<string name="set_ctrl_password">SET</string>
+	<string name="network_type_view">NetType</string>
+	
+	<string name="query_clientlist">QueryClients</string>
+	<string name="device_status">ON</string>	
+	<string name="client_offline">OffLine</string>
+	<string name="query_gpio">QueryGPIO</string>
+	<string name="set_gpio">SetGPIO</string>	
+	<string name="gpio_list_name">GPIO List:</string>
+	<string name="gpio_get_values_name">Get Values:</string>
+	<string name="gpio_set_values_name">Set Values:</string>
+	<string name="gpio_list">0 1 2 3 </string>
+	<string name="gpio_values">0 0 0 0 </string>
+	<string name="uart_tx">Uart Tx </string>
+	<string name="uart_rx">Uart Rx </string>
+	<string name="ipaddr_name">IP Addr: </string>
+
+</resources>
